@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from "react"
 
 export default function Contact() {
@@ -9,13 +8,10 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    
     const subject = encodeURIComponent("New Contact Form Submission")
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
     const mailtoLink = `mailto:vinaysai965@gmail.com?subject=${subject}&body=${body}`
-    
     window.location.href = mailtoLink
-
     alert("Email client opened. Please send the email from your default email client.")
   }
 
