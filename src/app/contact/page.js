@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react"
+import Image from "next/image"
 
 export default function Contact() {
   const [name, setName] = useState("")
@@ -17,13 +18,17 @@ export default function Contact() {
 
   return (
     <div className="w-full min-h-screen flex flex-col md:flex-row">
-      <div className="w-full md:w-1/2">
-        <img
+      {/* Left Image */}
+      <div className="w-full md:w-1/2 relative h-80 sm:h-96 md:h-auto">
+        <Image
           src="https://images.unsplash.com/photo-1583916438680-f047ee7a5aad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
           alt="Contact"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </div>
+
+      {/* Right Form */}
       <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
         <h1 className="text-3xl font-bold text-center mb-8">CONTACT</h1>
         <form onSubmit={handleSubmit} className="space-y-6">

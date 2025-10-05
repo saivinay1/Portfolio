@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <div>
       <h1 className="text-4xl text-center pt-10">Work</h1>
-      <div className="w-3/4 h-[100vh] mx-auto grid grid-cols-4 mt-5 gap-5">
+      <div className="w-11/12 sm:w-10/12 md:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
         {projects.map((project, index) => (
           <div key={index} className="h-80 bg-gray-200 flex flex-col">
             {project.link ? (

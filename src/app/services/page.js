@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <div className="w-full bg-[#FF9000]">
       <h1 className="text-4xl text-center pt-14 text-white">My Skills</h1>
-      <div className="w-3/4 mx-auto mt-8 grid grid-cols-4">
+      <div className="w-11/12 sm:w-10/12 md:w-3/4 mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <div key={index} className="h-44 text-center pt-4">
             <FontAwesomeIcon 

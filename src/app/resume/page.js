@@ -72,11 +72,11 @@ export default function Resume() {
 
       {/* Education */}
       <p className="text-2xl text-center mx-auto mt-6 bg-gray-300 w-1/4">Education</p>
-      <div className="w-4/5 flex grid grid-cols-2 mx-auto mt-8">
+      <div className="w-11/12 sm:w-10/12 md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 mt-8 gap-6">
         {education.map((edu, index) => (
           <div
             key={index}
-            className={`w-full h-72 p-10 ${index % 2 === 0 ? "border-r-2 border-black text-end" : ""}`}
+            className={`w-full h-72 p-10 ${index % 2 === 0 ? "md:border-r-2 md:border-black md:text-end" : ""}`}
           >
             <h1 className="text-2xl font-light">{edu.title}</h1>
             <h2 className="opacity-50">
@@ -92,11 +92,11 @@ export default function Resume() {
 
       {/* Work Experience */}
       <p className="text-2xl text-center mt-16 bg-gray-300 w-1/4 mx-auto">Work Experience</p>
-      <div className="w-4/5 flex grid grid-cols-2 mx-auto mt-8">
+      <div className="w-11/12 sm:w-10/12 md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 mt-8 gap-6">
         {experience.map((exp, index) => (
           <div
             key={index}
-            className={`w-full h-96 p-10 ${index % 2 === 0 ? "border-r-2 border-black text-end pr-10" : ""}`}
+            className={`w-full h-96 p-10 ${index % 2 === 0 ? "md:border-r-2 md:border-black md:text-end md:pr-10" : ""}`}
           >
             <h1 className="text-2xl font-light">{exp.role}</h1>
             <h2 className="opacity-50">{exp.company}</h2>
